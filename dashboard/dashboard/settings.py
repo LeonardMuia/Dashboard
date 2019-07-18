@@ -73,13 +73,22 @@ WSGI_APPLICATION = 'dashboard.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' : 'django', #create a database in mysql using Xampp
+        'USER' : 'root', # Change this to your own preferred username in your host
+        'PASSWORD' : '', # Use the password to the database in the localhost
+        'HOST': 'localhost'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
